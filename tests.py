@@ -23,5 +23,10 @@ class TestCase(unittest.TestCase):
         input = "12345678"
         self.assertFalse(check_pwd(input))
 
+    # test that a string containing no upper case lettes returns false
+    def test5(self):
+        input = "abcdefgh"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
