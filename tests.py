@@ -18,5 +18,10 @@ class TestCase(unittest.TestCase):
         input = "123456789012345678901"
         self.assertFalse(check_pwd(input))
 
+    # test that a string containing no lower case letters returns false
+    def test4(self):
+        input = "12345678"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
