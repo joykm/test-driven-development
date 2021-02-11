@@ -28,5 +28,10 @@ class TestCase(unittest.TestCase):
         input = "abcdefgh"
         self.assertFalse(check_pwd(input))
 
+    # test that a string containing no digits returns false
+    def test6(self):
+        input = "ABCDabcd"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
