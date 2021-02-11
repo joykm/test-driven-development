@@ -8,5 +8,10 @@ class TestCase(unittest.TestCase):
         input = ""
         self.assertFalse(check_pwd(input))
 
+    # test that a string under 8 characters long returns false
+    def test2(self):
+        input = "1234567"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
