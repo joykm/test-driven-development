@@ -33,5 +33,10 @@ class TestCase(unittest.TestCase):
         input = "ABCDabcd"
         self.assertFalse(check_pwd(input))
 
+    # test that a string containing no special chars returns false
+    def test7(self):
+        input = "ABCDabcd1234"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
