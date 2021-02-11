@@ -13,5 +13,10 @@ class TestCase(unittest.TestCase):
         input = "1234567"
         self.assertFalse(check_pwd(input))
 
+    # test that a string that is too large returns false
+    def test3(self):
+        input = "123456789012345678901"
+        self.assertFalse(check_pwd(input))
+
 if __name__ == '__main__':
     unittest.main()
